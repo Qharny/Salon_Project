@@ -1,25 +1,27 @@
 <?php
-    // Include the connection file
-    require "connection.php";
+session_start();
+require "connection.php";
 
-    // Check if the 'login' form has been submitted
-    if(isset($_POST['login'])){
-        // Sanitize and escape user input
-        $uname = mysqli_real_escape_string($my_connection, $_POST['username']);
-        $passd = mysqli_real_escape_string($my_connection, $_POST['password']);
+if(isset($_POST['login'])){
+    $name = mysqli_real_escape_string($my_connection, $_POST['mail']);
+    $pass = mysqli_real_escape_string($my_connection, $_POST['password']);
 
-        // SQL query to check if the username and password match in the database
-        $compare = "SELECT * FROM signup WHERE Username = '$uname' AND Password = '$passd'";
+    $query = "SELECT * FROM signup WHERE Username = '$name' OR Email = '$name'";
+    $result = mysqli_query($my_connection, $query);
 
-        // Execute the query
-        $check = mysqli_query($my_connection, $compare);
+    if($result && mysqli_num_rows($result) > 0){
+        $row = mysqli_fetch_assoc($result);
 
-        // Check if a matching username and password is found in the database
-        if(mysqli_num_rows($check) > 0){
-            echo "<script> alert('Login successful'); window.location='./homepage.html'; </script>";
+        if(password_verify($pass, $row["Password"])){
+            $_SESSION["login"] = true;
+            $_SESSION["id"] = $row["id"];
+            header("Location: ./homepage.html"); // Redirect to homepage after successful login
+            exit();
+        } else {
+            echo "<script> alert('Wrong Password'); </script>";
         }
-        else{
-            echo "<script> alert('Invalid username or password'); </script>";
-        }
+    } else {
+        echo "<script> alert('User not registered'); </script>";
     }
+}
 ?>
