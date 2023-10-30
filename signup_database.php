@@ -1,6 +1,6 @@
 <?php
     // Include the connection file
-    require "connnection.php";
+    require "connection.php";
 
     // Check if the 'signup' form has been submitted
     if(isset($_POST['signup'])){
@@ -27,7 +27,7 @@
                 // Insert user data into the 'signup' table
                 $data = "INSERT INTO signup (Fullname, Username, Email, Password, Confirm_password) VALUES('$fname','$uname', '$mail' ,'$passd', '$con_passd')";
                 mysqli_query($my_connection, $data);
-                echo "<script> alert('Registered successfully'); </script>";
+                echo "<script> alert('Registered successfully'); window.location(./hompage.html);</script>";
             }
             else{
                 echo "<script> alert('Password does not Match'); </script>";
