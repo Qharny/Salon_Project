@@ -15,6 +15,7 @@ create table signup(
 );
 
 
-INSERT INTO signup (FullName, Username, Email, Password, Confirm_Password) VALUES ('Sam Ben','they@me.com','12w3','12w3');
+INSERT INTO signup (FullName, Username, Email, Password, Confirm_Password) VALUES ('Sam Ben','SBen','they@me.com','12w3','12w3');
+INSERT INTO signup (FullName, Username, Email, Password, Confirm_Password) VALUES ('Kim Jim','Kim','ik@je.com','129','129');
 
 SELECT * FROM Signup;
