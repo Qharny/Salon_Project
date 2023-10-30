@@ -1,7 +1,7 @@
 <?php
     // Start a new or resume an existing session
     session_start();
-    
+
     // Database connection parameters
     $host = "localhost";        // Database host
     $user_name = "root";        // Database username
