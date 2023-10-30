@@ -6,7 +6,7 @@ if(isset($_POST['login'])){
     $name = mysqli_real_escape_string($my_connection, $_POST['mail']);
     $pass = mysqli_real_escape_string($my_connection, $_POST['password']);
 
-    $query = "SELECT * FROM signup WHERE Username = '$name' OR Email = '$name'";
+    $query = "SELECT * FROM signup WHERE Username = '$name' OR Email = '$mail'";
     $result = mysqli_query($my_connection, $query);
 
     if($result && mysqli_num_rows($result) > 0){
