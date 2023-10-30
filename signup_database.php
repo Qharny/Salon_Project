@@ -1,4 +1,6 @@
 <?php
+// This is the sigup database
+
     // Include the connection file
     require "connection.php";
 
