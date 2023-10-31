@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    background: linear-gradient(to right, #0000007c, #0000007c), url(img/bg.jpg) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    scroll-behavior: smooth;
+    color: #fff;
+}
+.secondary-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
