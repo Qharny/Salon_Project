@@ -135,16 +135,16 @@ span {
     display: none;
 }
 
-main{
+.booking{
     margin-top: 400px;
     padding: 20px;
     width: 100%;
-    height: 500px;
+    height: 300px;
     background: #fff;
     color: #000;
     font-size: 1.5rem;
 }
-main > h2{
+.booking > h2{
     font-size: 4rem;
     font-weight: 500;
     margin-bottom: 3rem;
@@ -165,7 +165,7 @@ form{
 }
 .select{
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     display: flex;
     flex-direction: row;
 }
@@ -223,9 +223,39 @@ button{
 button:hover{
     background: #F08080;
     color: #000;
-    box-shadow: 1px 1px 1px;
+    box-shadow: 1px 1px;
+}
+.info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: linear-gradient(to right, #0000007c, #0000007c), url(/imgs/facial.jpg) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    scroll-behavior: smooth;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    font-size: 1.5rem;
+}
+.info > .locate{
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+    color: #fff;
+}
+.info p {
+    padding: 5px;
+}
+.info .working-hours{
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+    color: #fff;
 }
 
+
+/* footer */
 
 footer {
     background-color: #000;
@@ -233,7 +263,11 @@ footer {
     text-align: center;
     font-size: 15px;
     padding: 10px;
-    position: fixed;
+    position: sticky;
     bottom: 0;
     width: 100%;
+}
+footer a{
+    color: #fff;
+    text-decoration: none;
 }

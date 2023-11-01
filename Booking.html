@@ -30,10 +30,8 @@
     </section>
     <main>
 
-
-        <h2>Book Appointment</h2>
-
         <section class="booking">
+            <h2>Book Appointment</h2>
             <p class="txt">Please Select a service:</p>
             <form action="" method="post">
                 <div class="select">
@@ -79,9 +77,43 @@
                 <button type="submit" value="Book!" name="save"> Book!</button>
             </form>
         </section>
+        <div class="info">
+            <div class="locate">
+                <h3>Locate Us</h3>
+                <p>
+                    <i class="fas fa-location"></i>
+                    Address: 1234 Main St, City, State 12345
+                </p>
+                <p>
+                    <i class="fas fa-phone"></i>
+                    Phone: (123) 456-7890
+                </p>
+                <p>
+                    <i class="fas fa-envelope"></i>
+                    Email: info@pageonesalon.com
+                </p>
+            </div>
+            <div class="working-hours">
+                <h3>Working Hours</h3>
+                <p>
+                    <i class="fas fa-clock"></i>
+                    Monday - Friday: 6:00 AM - 6:00 PM
+                </p>
+                <p>
+                    <i class="fas fa-clock"></i>
+                    Saturday: 9:00 AM - 4:00 PM
+                </p>
+                <p>
+                    <i class="fas fa-clock"></i>
+                    Sunday: Closed
+                </p>
+            </div>
+        </div>
     </main>
     <footer>
-        <p>&copy; 2023 pageOne salon</p>
+        <p>
+            &copy; 2023 pageOne salon | Design and Supported by <code><a href="https://github.com/qharny">MAY</a></code>   |   All Rights Reserved   |   Unauthorized copying is prohibited
+        </p>
     </footer>
 
 
@@ -104,20 +136,3 @@
 </body>
 
 </html>
-<!-- <?php
-require "connection.php";
-
-if (isset($_POST['submit'])) {
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $date = $_POST['date'];
-    $time = $_POST['time'];
-
-    $sql = "INSERT INTO bookings (name, email, date, time) VALUES (?, ?, ?, ?)";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ssss", $name, $email, $date, $time);
-    $stmt->execute();
-
-    echo "Booking successful!";
-}
-?> -->
