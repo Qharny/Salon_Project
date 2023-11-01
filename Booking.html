@@ -29,14 +29,60 @@
         </div>
     </section>
     <main>
-        <!-- <form method="post" action="booking.php">
-            Name: <input type="text" name="name"><br>
-            Email: <input type="text" name="email"><br>
-            Date: <input type="date" name="date"><br>
-            Time: <input type="time" name="time"><br>
-            <input type="submit" name="submit" value="Book">
-        </form> -->
+
+
+        <h2>Book Appointment</h2>
+
+        <section class="booking">
+            <p class="txt">Please Select a service:</p>
+            <form action="" method="post">
+                <div class="select">
+                    <!-- location select section -->
+                    <div class="location">
+                        <label for="location">Location</label>
+                        <select name="service" id="service">
+                            <option value="haircut"> Select location</option>
+                            <option value="haircut">Haircut</option>
+                            <option value="haircut">Haircut</option>
+                            <option value="haircut">Haircut</option>
+                        </select>
+                    </div>
+                    <!-- categoey select section -->
+                    <div class="category">
+                        <label for="Cat">Category</label>
+                        <select name="category" id="category">
+                            <option value="haircut"> Select category</option>
+                            <option value="haircut">Haircut</option>
+                            <option value="haircut">Haircut</option>
+                            <option value="haircut">Haircut</option>
+                        </select>
+                    </div>
+                    <!-- Service select section -->
+                    <div class="service">
+                        <label for="service">Service</label>
+                        <select name="service" id="service">
+                            <option value="haircut"> Select service</option>
+                            <option value="haircut">Haircut</option>
+                            <option value="haircut">Haircut</option>
+                            <option value="haircut">Haircut</option>
+                        </select>
+                    </div>
+                    <!-- date and time selection -->
+                    <div class="date-time">
+                        <label for="date">Select Date & Time:</label><br>
+                        <input type="date" name="date" id="date" class="date">
+                        <input type="time" name="time" id="time" class="time">
+                    </div>
+
+                </div>
+                <!-- submit button -->
+                <button type="submit" value="Book!" name="save"> Book!</button>
+            </form>
+        </section>
     </main>
+    <footer>
+        <p>&copy; 2023 pageOne salon</p>
+    </footer>
 
 
 
@@ -56,6 +102,7 @@
         }
     </script>
 </body>
+
 </html>
 <!-- <?php
 require "connection.php";
