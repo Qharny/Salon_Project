@@ -1,66 +1,134 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+* {
+    font-family: Georgia, 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all .2s ease-in-out;
 }
 
-html, body{
-    background: linear-gradient(to right, #0000007c, #0000007c), url(img/bg.jpg) no-repeat;
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar {
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #e60000;
+}
+
+section {
+    padding: 3rem 9%;
+}
+
+span {
+    color: #F08080;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem 3rem;
+    color: #fff;
+    font-size: 1.7rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.btn:hover {
+    letter-spacing: .1rem;
+}
+
+.heading {
+    text-align: center;
+    color: #222;
+    margin-bottom: 3rem;
+    font-size: 4rem;
+}
+
+.navbar:hover {
+    color: #fff;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-4rem) scale(0.4);
+    }
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 9%;
+}
+
+.header .logo {
+    font-size: 2.5rem;
+    color: #222;
+    font-weight: bolder;
+}
+
+.header .logo i {
+    color: #e60000;
+}
+
+.header .navbar a {
+    margin: 0 1.5rem;
+    font-size: 1.7rem;
+    color: #222;
+}
+
+.header .navbar a:hover {
+    color: #e60000;
+}
+
+.header .icons div,
+.header .icons a {
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    border-radius: .5rem;
+    background: #eee;
+    font-size: 1.7rem;
+    color: #222;
+    margin-left: .3rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.header .icons a:hover,
+.header .icons div:hover {
+    background: #e60000;
+    color: #fff;
+}
+
+.header #menu-btn {
+    display: none;
+}
+body{
+    background: linear-gradient(to right, #0000007c, #0000007c), url(imgs/salon.jpg) no-repeat;
     background-size: cover;
     background-attachment: fixed;
     scroll-behavior: smooth;
     color: #fff;
-}
-.secondary-header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-    background-color: #daa520;
-    width: 100%;
-    height: 50px;
-}
-a{
-    color: #f1f1f1;
-    text-decoration: none;
-}
-header{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    background: #f1f1f1;
-    padding: 10px 20px;
-    height: 100px;
-    width: 100%;
-}
-.logo{
-    border-radius: 50%;
-}
-nav > ul> li{
-    list-style: none;
-    display: inline;
-}
-nav > ul > li a{
-    color: #000;
-    font-family: 'Roboto', sans-serif;
-    transition: all .3s ease-in-out;
-    margin-right: 10px;
-}
-nav > ul > li a:hover{
-    color: #daa520;
-}
-
-main{
-    margin-top: 400px;
-    width: 100%;
-    height: 400px;
-    background-color: #000000;
-    padding: 10px;
-}
-footer{
-    background-color: #f1f1f1;
-    width: 100%;
-    height: 100px;
-    color: #000;
 }

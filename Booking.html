@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking || Area</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://kit.fontawesome.com/0fdab1252a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="booking.css">
+</head>
+
+<body>
+    <section id="header" class="header">
+        <a href="#" class="logo"><i class="fas fa-female"></i>Page One <span>Salon</span></a>
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#about">about</a>
+            <a href="#gallery">Gallery</a>
+            <a href="./booking.php">Book</a>
+            <a href="sampLogin.php">Login</a>
+            <a href="sampRegister.php">register</a>
+            <a href="logout.php">Logout</a>
+        </nav>
+        <div class="icons">
+            <div id="menu-btn" class=" fas fa-bars"></div>
+            <a href="#" class="fas fa-shopping-cart" title="cart"></a>
+        </div>
+    </section>
+    <main>
+        <!-- <form method="post" action="booking.php">
+            Name: <input type="text" name="name"><br>
+            Email: <input type="text" name="email"><br>
+            Date: <input type="date" name="date"><br>
+            Time: <input type="time" name="time"><br>
+            <input type="submit" name="submit" value="Book">
+        </form> -->
+    </main>
+
+
+
+
+    <script>
+        let menu = document.querySelector('#menu-btn');
+        let navbar = document.querySelector('.header .navbar');
+
+        menu.onclick = () => {
+            menu.classList.toggle('fas-times');
+            navbar.classList.toggle('active');
+        }
+
+        window.onscroll = () => {
+            menu.classList.remove('fa-times');
+            navbar.classList.remove('active');
+        }
+    </script>
+</body>
+</html>
+<!-- <?php
+require "connection.php";
+
+if (isset($_POST['submit'])) {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $date = $_POST['date'];
+    $time = $_POST['time'];
+
+    $sql = "INSERT INTO bookings (name, email, date, time) VALUES (?, ?, ?, ?)";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("ssss", $name, $email, $date, $time);
+    $stmt->execute();
+
+    echo "Booking successful!";
+}
+?> -->
