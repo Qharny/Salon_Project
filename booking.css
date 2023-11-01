@@ -6,7 +6,7 @@
     text-decoration: none;
     border: none;
     text-transform: capitalize;
-    transition: all .2s ease-in-out;
+    transition: all .2s linear;
 }
 
 html {
@@ -93,6 +93,7 @@ span {
 }
 
 .header .navbar a {
+    transition: 0.2s ease-in-out;
     margin: 0 1.5rem;
     font-size: 1.7rem;
     color: #222;
