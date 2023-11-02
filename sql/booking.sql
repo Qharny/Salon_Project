@@ -1,6 +1,8 @@
 -- sql for the booking page.
 use Salon_project;
 
+drop table Booking;
+
 create table Booking
 (
 	ID int auto_increment primary key,
@@ -19,8 +21,8 @@ select * from Booking;
 -- 2. Insert a new booking
 insert into Booking (location, service) values ('Spintex', 'Hair');
 insert into Booking (location, service) values ('Circle', 'Nail');
-insert into Booking (location, service) values ('Osu', 'Pedicure');
-insert into Booking (location, service) values ('Lapaz', 'Spa');
-insert into Booking (location, service) values ('HO', 'Skin Care');
-insert into Booking (location, service) values ('Kumasi', 'Make up');
+insert into Booking (location, service) values ('Osu', 'Massage');
+insert into Booking (location) values ('Lapaz');
+insert into Booking (location) values ('HO');
+insert into Booking (location) values ('Kumasi');
 
