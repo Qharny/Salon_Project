@@ -9,69 +9,67 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="https://kit.fontawesome.com/0fdab1252a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="booking.css">
+    <style>
+        /* Add your additional CSS styles here */
+    </style>
 </head>
 
 <body>
     <section id="header" class="header">
-        <a href="#" class="logo"><i class="fas fa-female"></i>Page One <span>Salon</span></a>
+        <a href="#" class="logo"><i class="fas fa-female"></i> Page One <span>Salon</span></a>
         <nav class="navbar">
-            <a href="#home">home</a>
-            <a href="#about">about</a>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
             <a href="#gallery">Gallery</a>
             <a href="./booking.php">Book</a>
             <a href="sampLogin.php">Login</a>
-            <a href="sampRegister.php">register</a>
+            <a href="sampRegister.php">Register</a>
             <a href="logout.php">Logout</a>
         </nav>
         <div class="icons">
-            <div id="menu-btn" class=" fas fa-bars"></div>
-            <a href="#" class="fas fa-shopping-cart" title="cart"></a>
+            <div id="menu-btn" class="fas fa-bars"></div>
+            <a href="#" class="fas fa-shopping-cart" title="Cart"></a>
         </div>
     </section>
     <main>
-
         <section class="booking">
             <h2>Book Appointment</h2>
-            <p class="txt">Please Book a service:</p>
-            <form action="./php/booking.php" method="post">
+            <p class="txt">Please book a service:</p>
+            <form method="post">
                 <div class="elem-group">
-
                     <div class="category">
                         <label for="category">Category:</label>
                         <select id="category" name="category">
-                            <option value="">Select a category</option>
-                            <option value="hair">Hair</option>
-                            <option value="nails">Nails</option>
-                            <option value="massage">Massage</option>
+                            <option value="" disabled selected>Select a category</option>
+                            <option value="Hair">Hair</option>
+                            <option value="Nails">Nails</option>
+                            <option value="Massage">Massage</option>
                         </select>
                     </div>
-
                     <div class="service">
-                        <label for="serve">Services:</label>
+                        <label for="service">Services:</label>
                         <select id="service" name="service" disabled>
-                            <option value="">Select a service</option>
+                            <option value="" disabled selected>Select a service</option>
                         </select>
                     </div>
-
                     <div class="stylist">
-                        <label for="stle">Stylist:</label>
+                        <label for="stylist">Stylist:</label>
                         <select id="stylist" name="stylist" disabled>
-                            <option value="">Select a stylist</option>
+                            <option value="" disabled selected>Select a stylist</option>
                         </select>
                     </div>
                     <div class="date-time">
-                        <label for="date-time">Date</label>
-                        <input type="date" name="date" id="date">
+                        <label for="date">Date:</label>
+                        <input type="date" id="date" name="date" required>
                     </div>
-                    <div class="times">
-                        <label for="times">Time</label>
-                        <input type="time" name="time" id="time">
+                    <div class="time">
+                        <label for="time">Time:</label>
+                        <input type="time" id="time" name="time" required>
                     </div>
                     <div class="anything">
                         <label for="message">Anything Else?</label>
-                    <textarea id="message" name="comment"
-                        placeholder="Tell us anything else that might be important.">
-                    </textarea>
+                        <textarea id="message" name="comment" placeholder="Tell us anything else that might be important."
+                            rows="4"></textarea>
                     </div>
                 </div>
                 <button type="submit" name="submit">Book Now!</button>
@@ -81,45 +79,35 @@
             <div class="locate">
                 <h3>Locate Us</h3>
                 <p>
-                    <i class="fas fa-location"></i>
-                    Address: 1234 Main St, City, State 12345
+                    <i class="fas fa-map-marker-alt"></i> Address: 1234 Main St, City, State 12345
                 </p>
                 <p>
-                    <i class="fas fa-phone"></i>
-                    Phone: (123) 456-7890
+                    <i class="fas fa-phone"></i> Phone: (123) 456-7890
                 </p>
                 <p>
-                    <i class="fas fa-envelope"></i>
-                    Email: info@pageonesalon.com
+                    <i class="fas fa-envelope"></i> Email: info@pageonesalon.com
                 </p>
             </div>
             <div class="working-hours">
                 <h3>Working Hours</h3>
                 <p>
-                    <i class="fas fa-clock"></i>
-                    Monday - Friday: 6:00 AM - 6:00 PM
+                    <i class="fas fa-clock"></i> Monday - Friday: 6:00 AM - 6:00 PM
                 </p>
                 <p>
-                    <i class="fas fa-clock"></i>
-                    Saturday: 9:00 AM - 4:00 PM
+                    <i class="fas fa-clock"></i> Saturday: 9:00 AM - 4:00 PM
                 </p>
                 <p>
-                    <i class="fas fa-clock"></i>
-                    Sunday: Closed
+                    <i class="fas fa-clock"></i> Sunday: Closed
                 </p>
             </div>
         </div>
     </main>
     <footer>
         <p>
-            &copy; 2023 pageOne salon | Design and Supported by <code><a href="https://github.com/qharny">MAY</a></code>
-            | All Rights Reserved | Unauthorized copying is prohibited
+            &copy; 2023 PageOne Salon | Design and Supported by <code><a href="https://github.com/qharny">MAY</a></code> |
+            All Rights Reserved | Unauthorized copying is prohibited
         </p>
     </footer>
-
-
-
-
     <script>
         let menu = document.querySelector('#menu-btn');
         let navbar = document.querySelector('.header .navbar');
@@ -128,21 +116,20 @@
             menu.classList.toggle('fas-times');
             navbar.classList.toggle('active');
         }
-        
 
         window.onscroll = () => {
-            menu.classList.remove('fa-times');
+            menu.classList.remove('fas-times');
             navbar.classList.remove('active');
         }
 
         const services = {
-            "hair": ["Haircut", "Coloring", "Styling"],
-            "nails": ["Manicure", "Pedicure", "Nail Art"],
-            "massage": ["Swedish Massage", "Deep Tissue Massage", "Hot Stone Massage"]
+            "Hair": ["Haircut", "Coloring", "Styling"],
+            "Nails": ["Manicure", "Pedicure", "Nail Art"],
+            "Massage": ["Swedish Massage", "Deep Tissue Massage", "Hot Stone Massage"]
         };
 
         const stylists = {
-            "Haircut": ["Adams (20 cedis)", "Smith(25cedis)", "Simon(18ghc)"],
+            "Haircut": ["Adams (20 cedis)", "Smith(25 cedis)", "Simon(18 cedis)"],
             "Coloring": ["Stylist A", "Stylist D", "Stylist E"],
             "Styling": ["Stylist B", "Stylist F", "Stylist G"],
             "Manicure": ["Stylist H", "Stylist I", "Stylist J"],
@@ -159,14 +146,16 @@
 
         categorySelect.addEventListener("change", function () {
             const categoryId = this.value;
-            serviceSelect.innerHTML = "<option value=''>Select a service</option>";
-            stylistSelect.innerHTML = "<option value=''>Select a stylist</option>";
+            serviceSelect.innerHTML = "<option value='' disabled selected>Select a service</option>";
+            stylistSelect.innerHTML = "<option value='' disabled selected>Select a stylist</option>";
 
             if (categoryId) {
                 services[categoryId].forEach(service => {
                     const option = document.createElement("option");
                     option.value = service;
-                    option.textContent = service;
+                    option.textContent
+
+ = service;
                     serviceSelect.appendChild(option);
                 });
 
@@ -179,7 +168,7 @@
 
         serviceSelect.addEventListener("change", function () {
             const selectedService = this.value;
-            stylistSelect.innerHTML = "<option value=''>Select a stylist</option>";
+            stylistSelect.innerHTML = "<option value='' disabled selected>Select a stylist</option>";
 
             if (selectedService) {
                 stylists[selectedService].forEach(stylist => {

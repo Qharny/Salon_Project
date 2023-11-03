@@ -15,7 +15,7 @@ if(isset($_POST['login'])){
         if($pass == $row["Password"]){
             $_SESSION["login"] = true;
             $_SESSION["id"] = $row["id"];
-            header("Location: ./homepage.html"); // Redirect to homepage after successful login
+            header("Location: ./booking.html"); // Redirect to homepage after successful login
             exit();
         } else {
             echo "<script> alert('Wrong Password'); </script>";

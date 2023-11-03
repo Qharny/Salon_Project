@@ -163,14 +163,13 @@ form{
     width: 100%;
     height: 100%;
 }
-.select{
-    width: 100%;
-    /* height: 100%; */
+.elem-group{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
 }
-
-.location{
+.service{
     display: flex;
     flex-direction: column;
     margin: 5px 20px 5px 0px;
@@ -180,14 +179,31 @@ form{
     flex-direction: column;
     margin: 5px;
 }
-.service{
+.stylist{
     display: flex;
     flex-direction: column;
     margin: 5px;
 }
+.date{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+.time{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+.anything{
+    display: flex;
+    flex-direction: column;
+}
+textarea{
+    border: 1px solid #000;
+}
 
 label{
-    margin-right: 100px;
+    margin: 5px;
 }
 select{
     width: 150px;
@@ -202,6 +218,7 @@ select{
 input{
     width: 150px;
     height: 25px;
+    margin: 5px;
     outline: none;
     overflow: hidden;
     border: 1px solid #000;
@@ -210,15 +227,15 @@ input{
     margin-right: 80px;
 }
 button{
-    width: 80px;
+    width: 150px;
     height: 30px;
     padding: 5px;
-    border: 0.1px solid #fff;
     border-radius: 5px;
     background: #e60000;
     color: #eee;
     font-size: 1.5rem;
     text-transform: uppercase;
+    margin: 10px;
 }
 button:hover{
     background: #F08080;
@@ -228,7 +245,7 @@ button:hover{
 .info{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-between ;
     background: linear-gradient(to right, #0000007c, #0000007c), url(/imgs/facial.jpg) no-repeat;
     background-size: cover;
     background-attachment: fixed;

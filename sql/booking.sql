@@ -1,14 +1,14 @@
 -- sql for the booking page.
 use Salon_project;
 
-drop table Booking;
+-- drop table Booking;
 
 create table Booking
 (
 	ID int auto_increment primary key,
-	location varchar(100),
     category varchar(100),
     service varchar(100),
+    stylist varchar(100),
     date date,
     time time
 );
@@ -18,11 +18,11 @@ create table Booking
 -- Queries
 -- 1. Get all the bookings
 select * from Booking;
--- 2. Insert a new booking
-insert into Booking (location, service) values ('Spintex', 'Hair');
-insert into Booking (location, service) values ('Circle', 'Nail');
-insert into Booking (location, service) values ('Osu', 'Massage');
-insert into Booking (location) values ('Lapaz');
-insert into Booking (location) values ('HO');
-insert into Booking (location) values ('Kumasi');
-
+-- 2. Insert into booking
+-- insert into Booking (category, service) values ('Spintex', 'Hair');
+-- insert into Booking (category, service) values ('Circle', 'Nail');
+-- insert into Booking (category, service) values ('Osu', 'Massage');
+-- insert into Booking (category) values ('Lapaz');
+-- insert into Booking (category) values ('HO');
+-- insert into Booking (category) values ('Kumasi');
+-- insert into Booking (category, service, date, time) values ('Kumasi','Massage','spa','2023-09-10', '03:56:45');
