@@ -100,7 +100,7 @@ span {
 }
 
 .header .navbar a:hover {
-    background: #e60000;
+    color: #e60000;
     /* color: #fff; */
 }
 
