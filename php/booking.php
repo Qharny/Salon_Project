@@ -9,7 +9,7 @@
         $time = $_POST['time'];
      $contact = $_POST['contact'];
 
-        $query = "INSERT INTO Booking (category, stylist, service, date, time) VALUES ('$cat','$style','$serve','$date','$time','$contact')";
+        $query = "INSERT INTO booking (category, stylist, service, date, time) VALUES ('$cat','$style','$serve','$date','$time','$contact')";
         $result = mysqli_query($my_connection, $query);
         if($result){
             echo "<script> alert('successfully Booked');window.location('../Booking.html');</script>";
@@ -19,7 +19,7 @@
         }
     }
 
-    $code = "SELECT * FROM Booking";
+    $code = "SELECT * FROM booking";
     $code2 = "SELECT FullName FROM register_tbl";
     $info = $my_connection->query($code);
     $info2 = $my_connection->query($code2);
@@ -42,7 +42,7 @@
         $delete = $_GET['delete_id'];
 
         // prepare and execute the delete query
-        $code = "DELETE FROM signup Where ID = ?";
+        $code = "DELETE FROM register_tbl Where ID = ?";
         $conn = $my_connection -> prepare($code);
         $conn-> bind_param("i", $delete);
 
