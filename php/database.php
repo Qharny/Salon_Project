@@ -18,10 +18,10 @@ if(isset($_POST['login'])){
             header("Location: ./booking.html"); // Redirect to homepage after successful login
             exit();
         } else {
-            echo "<script> alert('Wrong Password'); </script>";
+            echo "<script> alert('Wrong Password');window.location('../HTML/Booking.html'); </script>";
         }
     } else {
-        echo "<script> alert('User not registered'); </script>";
+        echo "<script> alert('User not registered');window.location('../HTML/login.html'); </script>";
     }
 }
 ?>
