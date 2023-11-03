@@ -7,8 +7,9 @@
         $style = $_POST['stylist'];
         $date = $_POST['date'];
         $time = $_POST['time'];
+     $contact = $_POST['contact'];
 
-        $query = "INSERT INTO Booking (category, stylist, service, date, time) VALUES ('$cat','$style','$serve','$date','$time')";
+        $query = "INSERT INTO Booking (category, stylist, service, date, time) VALUES ('$cat','$style','$serve','$date','$time','$contact')";
         $result = mysqli_query($my_connection, $query);
         if($result){
             echo "<script> alert('successfully Booked');window.location('../Booking.html');</script>";
@@ -19,7 +20,7 @@
     }
 
     $code = "SELECT * FROM Booking";
-    $code2 = "SELECT FullName FROM signup";
+    $code2 = "SELECT FullName FROM register_tbl";
     $info = $my_connection->query($code);
     $info2 = $my_connection->query($code2);
 
@@ -32,7 +33,8 @@
             Stylist: $col[stylist] <br>
             Date: $col[date] <br>
             Time: $col[time] <br>
-            <a href='booking.php?delete_id=$col[ID]'>Delete</a> <br>
+            Contact: $col[time] <br>
+            <a href='Booking.php?delete_id=$col[ID]'>Delete</a> <br>
         ";
         }
     }
