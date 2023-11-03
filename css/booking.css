@@ -13,7 +13,7 @@ html, body {
     overflow-x: hidden;
     scroll-behavior: smooth;
     scroll-padding-top: 7rem;
-    background: linear-gradient(to right, #0000007c, #0000007c), url(imgs/salon.jpg) no-repeat;
+    background: linear-gradient(to right, #0000007c, #0000007c), url(../imgs/salon.jpg) no-repeat;
     background-size: cover;
     background-attachment: fixed;
     scroll-behavior: smooth;
@@ -246,7 +246,7 @@ button:hover{
     display: flex;
     flex-direction: row;
     justify-content: space-between ;
-    background: linear-gradient(to right, #0000007c, #0000007c), url(/imgs/facial.jpg) no-repeat;
+    background: linear-gradient(to right, #0000007c, #0000007c), url(../imgs/facial.jpg) no-repeat;
     background-size: cover;
     background-attachment: fixed;
     scroll-behavior: smooth;
