@@ -21,8 +21,8 @@
         }
     }
 
-    $code = "SELECT * FROM booking";
-    $code2 = "SELECT FullName FROM register_tbl";
+    $code = "SELECT * FROM Booking";
+    $code2 = "SELECT FullName FROM signup";
     $info = $my_connection->query($code);
     $info2 = $my_connection->query($code2);
 
@@ -44,7 +44,7 @@
         $delete = $_GET['delete_id'];
 
         // prepare and execute the delete query
-        $code = "DELETE FROM register_tbl Where ID = ?";
+        $code = "DELETE FROM signup Where ID = ?";
         $conn = $my_connection -> prepare($code);
         $conn-> bind_param("i", $delete);
 
