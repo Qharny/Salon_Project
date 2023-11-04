@@ -7,11 +7,13 @@
         $style = $_POST['stylist'];
         $date = $_POST['date'];
         $time = $_POST['time'];
-     $contact = $_POST['contact'];
+        $contact = $_POST['telephone'];
 
-        $query = "INSERT INTO booking (category, stylist, service, date, time) VALUES ('$cat','$style','$serve','$date','$time','$contact')";
+        $query = "INSERT INTO booking (category, service, stylist, contact, date, time) VALUES ('$cat','$style','$serve','$date','$time','$contact')";
         $result = mysqli_query($my_connection, $query);
         if($result){
+            //call sms api
+            //https://apps.mnotify.net/smsapi?key=3w72C56POeMmp07tBxyVzS2Wj&to={}&msg=xxxxxxxx&sender_id=Saloon
             echo "<script> alert('successfully Booked');window.location('../Booking.html');</script>";
         }
         else{
@@ -54,6 +56,7 @@
         // close the statement
         $conn -> close();
     }
+
 
 
 

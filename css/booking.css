@@ -194,6 +194,11 @@ form{
     flex-direction: column;
     margin: 5px;
 }
+.contact{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
 .anything{
     display: flex;
     flex-direction: column;
