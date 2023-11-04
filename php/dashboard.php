@@ -38,17 +38,17 @@
                     <!-- <a href="#"><i class="fa fa-picture-o"></i>   portfolio</a> -->
                 </li>
                 <li>
-                    <a href="#"><i class="fa fa-phone"></i>   Booking</a>
+                    <a href="#"><i class="fa fa-book"></i>   Booking</a>
                 </li>
             </ul>
         </nav>
-        <div class="wrapper">
+        <!-- <div class="wrapper">
             <div class="section">
                 <div class="box-area">
                     <h2 style="color: #2b2626">Homepage</h2>
                 </div>
             </div>
-        </div>
+        </div> -->
         <ul>
             <li><a href="">Booking</a></li>
             <!-- <li><a href="">Users</a></li> -->
@@ -76,9 +76,9 @@
                     die("Connection failed: " . mysqli_connect_error());
                 }
                 //selecting all the data from the booking table
-                $sql = "SELECT * FROM signup";
+                $sql = "SELECT * FROM booking";
                 //executing the query
-                $result = mysqli_query($conn, $sql);
+                $result = mysqli_query($my_connection, $sql);
                 //checking if the query is successful
                 if (!$result) {
                     die("Query failed: " . mysqli_error($my_connection));
