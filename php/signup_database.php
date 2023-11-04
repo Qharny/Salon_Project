@@ -29,10 +29,10 @@
                 // Insert user data into the 'signup' table
                 $data = "INSERT INTO register_tbl (Fullname, Username, Email, Password, Confirm_password) VALUES('$fname','$uname', '$mail' ,'$passd', '$con_passd')";
                 mysqli_query($my_connection, $data);
-                echo "<script> alert('Registered successfully'); window.location(./hompage.html);</script>";
+                echo "<script> alert('Registered successfully'); window.location.href='../HTML/Booking.html;</script>";
             }
             else{
-                echo "<script> alert('Password does not Match');window.location('../HTML/login.html')</script>";
+                echo "<script> alert('Password does not Match');window.location.href='../HTML/login.html'</script>";
             };
         };
     }
