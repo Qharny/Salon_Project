@@ -14,7 +14,7 @@
         if($result){
             //call sms api
             //https://apps.mnotify.net/smsapi?key=3w72C56POeMmp07tBxyVzS2Wj&to={}&msg=xxxxxxxx&sender_id=Saloon
-            echo "<script> alert('successfully Booked');window.location.href='../HTML/Booking.html';</script>";
+            echo "<script> alert('successfully Booked. You will recieved and SMS');window.location.href='../HTML/Booking.html';</script>";
         }
         else{
             echo "<script>alert('Wrong information.Try Again');window.location.href='../HTML/Booking.html';</script>" . mysqli_error($my_connection);
