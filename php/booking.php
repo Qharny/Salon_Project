@@ -13,7 +13,7 @@
         $result = mysqli_query($my_connection, $query);
         if($result){
             //call sms api
-            //https://apps.mnotify.net/smsapi?key=3w72C56POeMmp07tBxyVzS2Wj&to={}&msg=xxxxxxxx&sender_id=Saloon
+            //https://apps.mnotify.net/smsapi?key=3w72C56POeMmp07tBxyVzS2Wj&to={}&msg=+233201209873&sender_id=Page1Salon
             echo "<script> alert('successfully Booked. You will recieved an SMS shortly');window.location.href='../HTML/Booking.html';</script>" ;
         }
         else{
