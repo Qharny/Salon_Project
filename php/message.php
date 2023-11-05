@@ -25,8 +25,8 @@ $endPoint = 'https://api.mnotify.com/api/senderid/register';
 $apiKey = 'l4OSeqp1RxuNBY3dmNr6J1NlP'; // Your API Key
 $url = $endPoint . '?key=' . $apiKey;
 $data = [
-  'sender_name' => '1PageSalon', // Sender ID
-  'purpose' => 'For Sending SMS Newsletters'
+  'sender_name' => 'Page1Salon', // Sender ID
+  'purpose' => 'Booking Confirmation '
 ];
 
 $ch = curl_init();
