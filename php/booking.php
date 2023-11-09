@@ -13,15 +13,15 @@
         $result = mysqli_query($my_connection, $query);
         if($result){
             //call sms api
-            //https://apps.mnotify.net/smsapi?key=3w72C56POeMmp07tBxyVzS2Wj&to={}&msg=xxxxxxxx&sender_id=Saloon
-            echo "<script> alert('successfully Booked. You will recieved and SMS');window.location.href='../HTML/Booking.html';</script>";
+            //https://apps.mnotify.net/smsapi?key=3w72C56POeMmp07tBxyVzS2Wj&to={}&msg=+233201209873&sender_id=Page1Salon
+            echo "<script> alert('successfully Booked. You will recieved an SMS shortly');window.location.href='../HTML/Booking.html';</script>" ;
         }
         else{
             echo "<script>alert('Wrong information.Try Again');window.location.href='../HTML/Booking.html';</script>" . mysqli_error($my_connection);
         }
     }
 
-    $code = "SELECT * FROM Booking";
+    $code = "SELECT * FROM booking";
     $code2 = "SELECT FullName FROM signup";
     $info = $my_connection->query($code);
     $info2 = $my_connection->query($code2);
