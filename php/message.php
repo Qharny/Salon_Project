@@ -1,6 +1,6 @@
 <?php
 // $api_key = 'l4OSeqp1RxuNBY3dmNr6J1NlP'; // Replace with your API Key
-// $url = 'https://apps.mnotify.net/smsapi?key=l4OSeqp1RxuNBY3dmNr6J1NlP&to={+233257645744}&msg=Wecome&sender_id=1PageSalon'; // API URL
+// $url = 'https://apps.mnotify.net/smsapi?key=l4OSeqp1RxuNBY3dmNr6J1NlP&to={+233257645744}&msg=Wecome&sender_id=Page1Salon'; // API URL
 // $data = array(
 //     'sender' => 'Page One Salon', // Sender ID
 //     'message' => 'Hello, this is a test message', // Message
@@ -21,7 +21,7 @@
 // var_dump($result);
 
 
-$endPoint = 'https://api.mnotify.com/api/senderid/register';
+$endPoint = 'https://apps.mnotify.net/smsapi?key=l4OSeqp1RxuNBY3dmNr6J1NlP&to={+233257645744}&msg=Wecome&sender_id=Page1Salon';
 $apiKey = 'l4OSeqp1RxuNBY3dmNr6J1NlP'; // Your API Key
 $url = $endPoint . '?key=' . $apiKey;
 $data = [
