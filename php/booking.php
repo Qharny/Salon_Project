@@ -18,8 +18,10 @@
             // Define the recipient number
             $recipient = $contact;
             $user = $name;
-            $message =  $user . '!Welcome to Page1Salon. You successfully booked an appointment.';
-        
+            $randomString = uniqid(); // This will generate a unique string
+
+
+            $message =  $user . '! Welcome to Page1Salon. You successfully booked an appointment. Your booking code is ' . $randomString;
             // Define the parameters
             $params = [
                 'key' => '3w72C56POeMmp07tBxyVzS2Wj',
@@ -27,7 +29,7 @@
                 'msg' => $message,
                 'sender_id' => 'Page1Salon'
             ];
-        
+
             // Create a new curl session
             $curl = curl_init();
         
