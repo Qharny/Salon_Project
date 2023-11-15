@@ -18,12 +18,13 @@
             // Define the recipient number
             $recipient = $contact;
             $user = $name;
+            $message =  'Welcome to Page1Salon. This is you booking code' +$user;
         
             // Define the parameters
             $params = [
                 'key' => '3w72C56POeMmp07tBxyVzS2Wj',
                 'to' => $recipient,
-                'msg' => 'Welcome to Page1Salon. This is you booking code' +$user,
+                'msg' => $message,
                 'sender_id' => 'Page1Salon'
             ];
         
