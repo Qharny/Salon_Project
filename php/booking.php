@@ -12,6 +12,33 @@
         $query = "INSERT INTO booking (category, service, stylist, contact, date, time) VALUES ('$cat','$style','$serve','$date','$time','$contact')";
         $result = mysqli_query($my_connection, $query);
         if($result){
+            $url = "https://apps.mnotify.net/smsapi";
+
+            // Define the recipient number
+            $recipient = $contact;
+        
+            // Define the parameters
+            $params = [
+                'key' => '3w72C56POeMmp07tBxyVzS2Wj',
+                'to' => $recipient,
+                'msg' => 'Welcome to my Salon',
+                'sender_id' => 'Page1Salon'
+            ];
+        
+            // Create a new curl session
+            $curl = curl_init();
+        
+            // Set the curl options
+            curl_setopt($curl, CURLOPT_URL, $url);
+            curl_setopt($curl, CURLOPT_POST, true);
+            curl_setopt($curl, CURLOPT_POSTFIELDS, http_build_query($params));
+            curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+        
+            // Execute the curl request
+            $response = curl_exec($curl);
+        
+            // Close the curl session
+            curl_close($curl);
             //call sms api
             //https://apps.mnotify.net/smsapi?key=3w72C56POeMmp07tBxyVzS2Wj&to={}&msg=+233201209873&sender_id=Page1Salon
             echo "<script> alert('successfully Booked. You will recieved an SMS shortly');window.location.href='../HTML/Booking.html';</script>" ;
