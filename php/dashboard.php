@@ -56,13 +56,13 @@
     </aside>
     <main>
         <!-- table to display users -->
-        <table>
+        <table border="1">
             <thead>
                 <tr>
                     <th>Full Name</th>
-                    <th>Telephone</th>
                     <th>Service</th>
                     <th>Stylist</th>
+                    <th>Contact</th>
                     <th>Date</th>
                     <th>Time</th>
                 </tr>
@@ -70,7 +70,7 @@
             <tbody>
                 <?php
                 //connecting to the database
-                require "../php/connection.php";
+                require "connection.php";
                 //checking if the connection is successful
                 if (!$my_connection) {
                     die("Connection failed: " . mysqli_connect_error());
@@ -86,10 +86,10 @@
                 //looping through the data
                 while ($row = mysqli_fetch_assoc($result)) {
                     echo "<tr>";
-                    echo "<td>" . $row['Fulllname'] . "</td>";
-                    echo "<td>" . $row['contact'] . "</td>";
+                    echo "<td>" . $row['name'] . "</td>";
                     echo "<td>" . $row['service'] . "</td>";
                     echo "<td>" . $row['stylist'] . "</td>";
+                    echo "<td>" . $row['contact'] . "</td>";
                     echo "<td>" . $row['date'] . "</td>";
                     echo "<td>" . $row['time'] . "</td>";
                     echo "</tr>";
