@@ -1,49 +1,78 @@
 <?php
-// $api_key = 'l4OSeqp1RxuNBY3dmNr6J1NlP'; // Replace with your API Key
-// $url = 'https://apps.mnotify.net/smsapi?key=l4OSeqp1RxuNBY3dmNr6J1NlP&to={+233257645744}&msg=Wecome&sender_id=Page1Salon'; // API URL
 
-// $url = 'https://apps.mnotify.net/smsapi?key=l4OSeqp1RxuNBY3dmNr6J1NlP&to={+233201209873}&msg=Confirmed&sender_id=Page1Salon'; // API URL
-// a71f8450118c335fa38d854807f0a381c6b0a85e
-// $data = array(
-//     'sender' => 'Page1Salon', // Sender ID
-//     'message' => 'Hello, this is a test message', // Message
-//     'mobiles' => '+233201209873', // Recipient Phone Number
-// );
+// // Include the mnotify library
+// require_once 'mnotify.php';
 
-// $options = array(
-//     'http' => array(
-//         'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
-//         'method'  => 'POST',
-//         'content' => http_build_query($data),
-//     ),
-// );
-// $context  = stream_context_create($options);
-// $result = file_get_contents($url, false, $context);
-// if ($result === FALSE) { /* Handle error */ }
+// // Get the contact from the database
+// $contact = getContactFromDatabase();
 
-// var_dump($result);
+// // Create a new instance of the mnotify class
+// $mnotify = new Mnotify();
+
+// // Set your mnotify API key
+// $mnotify->setApiKey('YOUR_API_KEY');
+
+// // Set the sender ID
+// $mnotify->setSenderId('YOUR_SENDER_ID');
+
+// // Set the recipient's phone number
+// $mnotify->setRecipient($contact['phone_number']);
+
+// // Set the message content
+// $message = 'Welcome to our platform!';
+
+// // Send the message
+// $response = $mnotify->sendMessage($message);
+
+// // Check if the message was sent successfully
+// if ($response['status'] == 'success') {
+//     echo 'Message sent successfully!';
+// } else {
+//     echo 'Failed to send message. Error: ' . $response['message'];
+// }
+
+// // Function to get the contact from the database
+// function getContactFromDatabase()
+// {
+//     // Your code to retrieve the contact from the database goes here
+//     // Replace this with your actual implementation
+//     $contact = [
+//         'phone_number' => '+1234567890',
+//         'name' => 'John Doe',
+//         'email' => 'johndoe@example.com'
+//     ];
+
+//     return $contact;
+// }
 
 
-$endPoint = 'https://apps.mnotify.net/smsapi?key=l4OSeqp1RxuNBY3dmNr6J1NlP&to={+233257645744}&msg=Wecome&sender_id=Page1Salon';
-$apiKey = 'l4OSeqp1RxuNBY3dmNr6J1NlP'; // Your API Key
-$url = $endPoint . '?key=' . $apiKey;
-$data = [
-  'sender_name' => 'Page1Salon', // Sender ID
-  'purpose' => 'Booking Confirmation '
-];
+// Include the mnotify library
+require_once 'mnotify.php';
 
-$ch = curl_init();
-$headers = array();
-$headers[] = "Content-Type: application/json";
-curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-curl_setopt($ch, CURLOPT_URL, $url);
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
-$result = curl_exec($ch);
-$result = json_decode($result, TRUE);
-curl_close($ch);
+// Create a new instance of the mnotify class
+$mnotify = new Mnotify();
 
+// Set your mnotify API key
+$mnotify->setApiKey('YOUR_API_KEY');
+
+// Set the sender ID
+$mnotify->setSenderId('YOUR_SENDER_ID');
+
+// Set the recipient's phone number
+$mnotify->setRecipient('+1234567890');
+
+// Set the message content
+$message = 'Welcome to our platform!';
+
+// Send the message
+$response = $mnotify->sendMessage($message);
+
+// Check if the message was sent successfully
+if ($response['status'] == 'success') {
+    echo 'Message sent successfully!';
+} else {
+    echo 'Failed to send message. Error: ' . $response['message'];
+}
 
 
 ?>
