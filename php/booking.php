@@ -18,7 +18,7 @@
             // Define the recipient number
             $recipient = $contact;
             $user = $name;
-            $message =  $user + '!Welcome to Page1Salon. You successfully booked an appointment.';
+            $message =  $user . '!Welcome to Page1Salon. You successfully booked an appointment.';
         
             // Define the parameters
             $params = [
