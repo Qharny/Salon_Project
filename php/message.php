@@ -53,10 +53,10 @@ require_once 'mnotify.php';
 $mnotify = new Mnotify();
 
 // Set your mnotify API key
-$mnotify->setApiKey('YOUR_API_KEY');
+$mnotify->setApiKey('l4OSeqp1RxuNBY3dmNr6J1NlP');
 
 // Set the sender ID
-$mnotify->setSenderId('YOUR_SENDER_ID');
+$mnotify->setSenderId('Page1Salon');
 
 // Set the recipient's phone number
 $mnotify->setRecipient('+1234567890');
