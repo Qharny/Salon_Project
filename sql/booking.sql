@@ -9,6 +9,7 @@ create table Booking
     category varchar(100),
     service varchar(100),
     stylist varchar(100),
+    contact varchar(20),
     date date,
     time time
 );
