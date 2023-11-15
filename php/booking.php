@@ -2,6 +2,7 @@
     require "./connection.php";
 
     if(isset($_POST['submit'])){
+        $name = $_POST["name"];
         $cat = $_POST['category'];
         $serve = $_POST['service'];
         $style = $_POST['stylist'];
@@ -21,7 +22,7 @@
             $params = [
                 'key' => '3w72C56POeMmp07tBxyVzS2Wj',
                 'to' => $recipient,
-                'msg' => 'Welcome to my Salon',
+                'msg' => 'Welcome to Page1Salon. This is you booking code',
                 'sender_id' => 'Page1Salon'
             ];
         
