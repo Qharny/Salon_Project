@@ -17,7 +17,7 @@
             if(password_verify($pass, $row["AdminPassword"])){
                 $_SESSION["send"] = true;
                 $_SESSION["id"] = $row["AdminID"];
-                header("Location: ../php/dashboard.php"); // Redirect to homepage after successful login
+                header("Location: ../php/dashboard.php"); // Redirect to dashboard after successful login
                 exit();
             } else {
                 echo "<script> alert('Wrong Password');window.location.href='../HTML/admin.html'; </script>";
