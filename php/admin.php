@@ -7,7 +7,6 @@
     if(isset($_POST['send'])){
         $name = $_POST['loginUser'];
         $pass = $_POST['loginPassword'];
-        $mail = $_POST['loginMail'];
 
         $stmt = $my_connection->prepare("SELECT * FROM Admin WHERE AdminName = ? OR AdminEmail = ?");
         $stmt->bind_param("ss", $name, $name);
