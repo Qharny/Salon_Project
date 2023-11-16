@@ -1,18 +1,21 @@
 <?php
     session_start();
-    
+
     require "connection.php";
 
     // login
     if(isset($_POST['send'])){
-        $name = mysqli_real_escape_string($my_connection, $_POST['loginUser']);
-        $pass = mysqli_real_escape_string($my_connection, $_POST['loginPassword']);
+        $name = $_POST['loginUser'];
+        $pass = $_POST['loginPassword'];
+        $mail = $_POST['loginMail'];
 
-        $query = "SELECT * FROM Admin WHERE AdminName = '$name' OR AdminEmail = '$name'";
-        $result = mysqli_query($my_connection, $query);
+        $stmt = $my_connection->prepare("SELECT * FROM Admin WHERE AdminName = ? OR AdminEmail = ?");
+        $stmt->bind_param("ss", $name, $name);
+        $stmt->execute();
+        $result = $stmt->get_result();
 
-        if($result && mysqli_num_rows($result) > 0){
-            $row = mysqli_fetch_assoc($result);
+        if($result && $result->num_rows > 0){
+            $row = $result->fetch_assoc();
 
             if(password_verify($pass, $row["AdminPassword"])){
                 $_SESSION["send"] = true;
@@ -25,6 +28,8 @@
         } else {
             echo "<script> alert('User not registered');window.location.href='../HTML/admin.html'; </script>";
         }
+
+        $stmt->close();
     }
 
 ?>
