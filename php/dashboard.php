@@ -48,11 +48,11 @@
                     <h2 style="color: #2b2626">Homepage</h2>
                 </div>
             </div>
-        </div> -->
+        </div>
         <ul>
             <li><a href="">Booking</a></li>
-            <!-- <li><a href="">Users</a></li> -->
-        </ul>
+            <li><a href="">Users</a></li>
+        </ul> -->
     </aside>
     <main>
         <!-- table to display users -->
@@ -60,8 +60,8 @@
             <thead>
                 <tr>
                     <th>Full Name</th>
-                    <th>Service</th>
                     <th>Stylist</th>
+                    <th>Service</th>
                     <th>Contact</th>
                     <th>Date</th>
                     <th>Time</th>
