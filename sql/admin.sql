@@ -1,3 +1,4 @@
+use Salon_Project;
 -- Create table to accept details
 
 create table Admin (
