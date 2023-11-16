@@ -6,6 +6,7 @@ use Salon_project;
 create table Booking
 (
 	ID int auto_increment primary key,
+    name varchar(200),
     category varchar(100),
     service varchar(100),
     stylist varchar(100),

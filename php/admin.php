@@ -1,5 +1,6 @@
 <?php
-
+    session_start();
+    
     require "connection.php";
 
     // login
@@ -7,15 +8,15 @@
         $name = mysqli_real_escape_string($my_connection, $_POST['loginUser']);
         $pass = mysqli_real_escape_string($my_connection, $_POST['loginPassword']);
 
-        $query = "SELECT * FROM signup WHERE Username = '$name' OR Email = '$name'";
+        $query = "SELECT * FROM Admin WHERE AdminName = '$name' OR AdminEmail = '$name'";
         $result = mysqli_query($my_connection, $query);
 
         if($result && mysqli_num_rows($result) > 0){
             $row = mysqli_fetch_assoc($result);
 
-            if(password_verify($pass, $row["Password"])){
+            if(password_verify($pass, $row["AdminPassword"])){
                 $_SESSION["send"] = true;
-                $_SESSION["id"] = $row["id"];
+                $_SESSION["id"] = $row["AdminID"];
                 header("Location: ../php/dashboard.php"); // Redirect to homepage after successful login
                 exit();
             } else {

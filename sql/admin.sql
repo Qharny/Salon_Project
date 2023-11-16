@@ -1,3 +1,4 @@
+use Salon_Project;
 -- Create table to accept details
 
 create table Admin (
@@ -11,7 +12,7 @@ create table Admin (
 
 
 -- insert into admin table
-insert into Admin (AdminNAme, AdminEmail, AdminPassword) values ('admin', 'admin@gmail.com', 'password');
-insert into Admin (AdminNAme, AdminEmail, AdminPassword) values ('Manasseh', 'manasseh@gmail.com', 'Manasseh');
-insert into Admin (AdminNAme, AdminEmail, AdminPassword) values ('MAy', 'may@gmail.com', 'mayor');
+insert into Admin (AdminName, AdminEmail, AdminPassword) values ('admin', 'admin@gmail.com', 'password');
+insert into Admin (AdminName, AdminEmail, AdminPassword) values ('Manasseh', 'manasseh@gmail.com', 'Manasseh');
+insert into Admin (AdminName, AdminEmail, AdminPassword) values ('MAy', 'may@gmail.com', 'mayor');
 
