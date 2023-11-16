@@ -2,7 +2,7 @@
 session_start();
 require "connection.php";
 
-if(isset($_POST['login'])){
+if(isset($_POST['send'])){
     $name = mysqli_real_escape_string($my_connection, $_POST['loginUser']);
     $pass = mysqli_real_escape_string($my_connection, $_POST['loginPassword']);
 
@@ -12,7 +12,7 @@ if(isset($_POST['login'])){
     if($result && mysqli_num_rows($result) > 0){
         $row = mysqli_fetch_assoc($result);
 
-        if($pass == $row["Password"]){
+        if($pass == $row["AdminPassword"]){
             $_SESSION["login"] = true;
             $_SESSION["id"] = $row["AdminID"];
             header("Location: ../php/dashboard.php"); // Redirect to homepage after successful login
