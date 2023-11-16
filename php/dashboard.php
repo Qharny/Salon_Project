@@ -67,7 +67,7 @@
                     <th>Time</th>
                 </tr>
             </thead>
-            <!-- <tbody>
+            <tbody>
                 <?php
                 //connecting to the database
                 require "connection.php";
@@ -95,7 +95,7 @@
                     echo "</tr>";
                 }
                 ?>
-            </tbody> -->
+            </tbody>
     </main>
 </body>
 
