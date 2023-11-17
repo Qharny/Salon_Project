@@ -23,7 +23,7 @@ if(isset($_POST['send'])){
     } else {
         echo "<script> alert('User not registered');window.location.href='../HTML/admin.html'; </script>";
     }
-}
+}{
         $stmt = $my_connection->prepare("SELECT * FROM Admin WHERE AdminName = ? OR AdminEmail = ?");
         $stmt->bind_param("ss", $name, $name);
         $stmt->execute();
