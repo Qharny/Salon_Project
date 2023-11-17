@@ -10,7 +10,7 @@
         $time = $_POST['time'];
         $contact = $_POST['telephone'];
 
-        $query = "INSERT INTO booking (name, category, service, stylist, contact, date, time) VALUES ('$name','$cat','$style','$serve','$date','$time','$contact')";
+        $query = "INSERT INTO booking (name, category, service, stylist, contact, date, time) VALUES ('$name','$cat','$serve','$style','$contact','$date','$time')";
         $result = mysqli_query($my_connection, $query);
         if($result){
             $url = "https://apps.mnotify.net/smsapi";
@@ -85,7 +85,7 @@
     //     }
     //     // close the statement
     //     $conn -> close();
-    //}
+    
 
 
 

@@ -38,3 +38,12 @@ function showContent(content) {
 // Show home content by default
 showContent('home');
 
+
+// Get today's date
+var today = new Date();
+var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+var dateTime = date+' '+time;
+
+// Display today's date
+document.getElementById('date').textContent = dateTime;

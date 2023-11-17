@@ -64,15 +64,6 @@
     </section>
     <a id="logout" href="logout.php">Logout</a>
 
-    <script>
-        // Get today's date
-        var today = new Date();
-        var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-        var dateTime = date+' '+time;
-
-        // Display today's date
-        document.getElementById('date').textContent = dateTime;
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
