@@ -43,12 +43,38 @@
             </ul>
         </nav>
     </aside>
-    <main class="main-content">
+    <main id="main-content" class="main-content">
         <!-- Content goes here -->
     </main>
 
-    <script src="script.js"></script>
+    <script>
+        function showContent(content) {
+            var mainContent = document.getElementById('main-content');
+
+            switch(content) {
+                case 'home':
+                    fetch('../php/home.php')
+                        .then(response => response.text())
+                        .then(data => mainContent.innerHTML = data);
+                    break;
+                case 'users':
+                    fetch('../php/users.php')
+                        .then(response => response.text())
+                        .then(data => mainContent.innerHTML = data);
+                    break;
+                case 'booking':
+                    fetch('../php/bookingHistory.php')
+                        .then(response => response.text())
+                        .then(data => mainContent.innerHTML = data);
+                    break;
+                default:
+                    mainContent.innerHTML = '';
+            }
+        }
+
+        // Show home content by default
+        showContent('home');
+    </script>
 </body>
 
 </html>
-
