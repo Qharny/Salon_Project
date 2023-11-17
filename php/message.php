@@ -8,13 +8,13 @@ require_once 'mnotify.php';
 $mnotify = new Mnotify();
 
 // Set your mnotify API key
-$mnotify->setApiKey('l4OSeqp1RxuNBY3dmNr6J1NlP');
+$mnotify->setApiKey('YOUR_API_KEY');
 
 // Set the sender ID
-$mnotify->setSenderId('Page1Salon');
+$mnotify->setSenderId('SENDER_ID');
 
 // Set the recipient's phone number
-$mnotify->setRecipient('+1234567890');
+$mnotify->setRecipient('NUMBER');
 
 // Set the message content
 $message = 'Welcome to our platform!';

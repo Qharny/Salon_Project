@@ -24,8 +24,8 @@
 // var_dump($result);
 
 
-$endPoint = 'https://apps.mnotify.net/smsapi?key=l4OSeqp1RxuNBY3dmNr6J1NlP&to={+233257645744}&msg=Wecome&sender_id=Page1Salon';
-$apiKey = 'l4OSeqp1RxuNBY3dmNr6J1NlP'; // Your API Key
+$endPoint = '#';
+$apiKey = ' Your API Key';
 $url = $endPoint . '?key=' . $apiKey;
 $data = [
   'sender_name' => 'Page1Salon', // Sender ID

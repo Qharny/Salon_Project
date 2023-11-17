@@ -43,7 +43,7 @@
         public function __construct($recipient)
         {
             // Initialize the properties
-            $this->api_key = 'l4OSeqp1RxuNBY3dmNr6J1NlP';
+            $this->api_key = 'API_KEY';
             $this->sender_id = 'Page1Salon';
             $this->recipient = $recipient;
         }

@@ -13,7 +13,7 @@
         $query = "INSERT INTO booking (name, category, service, stylist, contact, date, time) VALUES ('$name','$cat','$serve','$style','$contact','$date','$time')";
         $result = mysqli_query($my_connection, $query);
         if($result){
-            $url = "https://apps.mnotify.net/smsapi";
+            $url = "YOUR_URL";
 
             // Define the recipient number
             $recipient = $contact;
@@ -24,10 +24,10 @@
             $message =  $user . '! Welcome to Page1Salon. You successfully booked an appointment. Your booking code is ' . $randomString;
             // Define the parameters
             $params = [
-                'key' => '3w72C56POeMmp07tBxyVzS2Wj',
+                'key' => 'YOUR_API_KEY',
                 'to' => $recipient,
                 'msg' => $message,
-                'sender_id' => 'Page1Salon'
+                'sender_id' => 'SENDER_ID'
             ];
 
             // Create a new curl session
