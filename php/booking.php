@@ -10,7 +10,7 @@
         $time = $_POST['time'];
         $contact = $_POST['telephone'];
 
-        $query = "INSERT INTO booking (name, category, service, stylist, contact, date, time) VALUES ('$name','$cat','$style','$serve','$contact''$date','$time')";
+        $query = "INSERT INTO booking (name, category, service, stylist, contact, date, time) VALUES ('$name','$cat','$serve','$style','$contact','$date','$time')";
         $result = mysqli_query($my_connection, $query);
         if($result){
             $url = "https://apps.mnotify.net/smsapi";
@@ -67,27 +67,25 @@
             Date: $col[date] <br>
             Time: $col[time] <br>
             Contact: $col[time] <br>
-            <a href='Booking.php?delete_id=$col[ID]'>Delete</a> <br>
         ";
         }
     }
-    if(isset($_GET['delete_id'])){
-        $delete = $_GET['delete_id'];
+    // if(isset($_GET['delete_id'])){
+    //     $delete = $_GET['delete_id'];
 
-        // prepare and execute the delete query
-        $code = "DELETE FROM signup Where ID = ?";
-        $conn = $my_connection -> prepare($code);
-        $conn-> bind_param("i", $delete);
+    //     // prepare and execute the delete query
+    //     $code = "DELETE FROM signup Where ID = ?";
+    //     $conn = $my_connection -> prepare($code);
+    //     $conn-> bind_param("i", $delete);
 
-        if ($conn->execute()){
-            echo "<script >alert('Successfully deleted'); window.location='../Booking.html';</script>";
-        }else{
-            echo "<script >alert('Error');</script>";
-        }
-        // close the statement
-        $conn -> close();
-    }
-
+    //     if ($conn->execute()){
+    //         echo "<script >alert('Successfully deleted'); window.location='../Booking.html';</script>";
+    //     }else{
+    //         echo "<script >alert('Error');</script>";
+    //     }
+    //     // close the statement
+    //     $conn -> close();
+    
 
 
 
