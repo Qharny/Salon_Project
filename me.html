@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        #header {
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        #sidebar {
+            width: 200px;
+            height: calc(100vh - 40px);
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+        }
+        #sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        #sidebar ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        #main-content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <h1>Dashboard</h1>
+    </div>
+    <div id="sidebar">
+        <ul>
+            <li><a href="#" onclick="showContent('home')">Home</a></li>
+            <li><a href="#" onclick="showContent('users')">Users</a></li>
+            <li><a href="#" onclick="showContent('booking')">Booking</a></li>
+        </ul>
+    </div>
+    <div id="main-content">
+        <!-- Content will be displayed here -->
+    </div>
+
+    <script>
+        function showContent(content) {
+    var mainContent = document.getElementById('main-content');
+
+    switch(content) {
+        case 'home':
+            fetch('home.html')
+                .then(response => response.text())
+                .then(data => mainContent.innerHTML = data);
+            break;
+        case 'users':
+            fetch('users.html')
+                .then(response => response.text())
+                .then(data => mainContent.innerHTML = data);
+            break;
+        case 'booking':
+            fetch('booking.html')
+                .then(response => response.text())
+                .then(data => mainContent.innerHTML = data);
+            break;
+        default:
+            mainContent.innerHTML = '';
+    }
+}
+
+
+        // Show home content by default
+        showContent('home');
+    </script>
+</body>
+
+</html>
