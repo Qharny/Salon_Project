@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dashboard</title>
+    <style>
+        /* CSS for header */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* CSS for sidebar */
+        .sidebar {
+            background-color: #f1f1f1;
+            width: 200px;
+            padding: 10px;
+            float: left;
+        }
+
+        /* CSS for sidebar links */
+        .sidebar a {
+            display: block;
+            margin-bottom: 10px;
+            color: #333;
+            text-decoration: none;
+        }
+
+        /* CSS for main content */
+        .content {
+            margin-left: 220px;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Dashboard</h1>
+    </header>
+
+    <div class="sidebar">
+        <a href="#home">Home</a>
+        <a href="#users">Users</a>
+        <a href="#booking">Booking</a>
+    </div>
+
+    <div class="content">
+        <!-- Content will be displayed here based on the clicked link -->
+    </div>
+    <script>
+        // JavaScript to handle link clicks and display content
+        document.addEventListener('DOMContentLoaded', function () {
+            var links = document.querySelectorAll('.sidebar a');
+            var content = document.querySelector('.content');
+
+            links.forEach(function (link) {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    var target = this.getAttribute('href').substring(1);
+                    content.innerHTML = '<h2>' + target + ' Content</h2>';
+                });
+            });
+        });
+
+    </script>
+</body>
+
+</html>
