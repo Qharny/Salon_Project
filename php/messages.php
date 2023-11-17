@@ -28,7 +28,7 @@ $endPoint = '#';
 $apiKey = ' Your API Key';
 $url = $endPoint . '?key=' . $apiKey;
 $data = [
-  'sender_name' => 'Page1Salon', // Sender ID
+  'sender_name' => 'Sender ID',
   'purpose' => 'Booking Confirmation '
 ];
 
