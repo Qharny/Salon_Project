@@ -52,7 +52,6 @@
 <body>
     <h1>Welcome, Admin!</h1>
     <img id="profile-pic" src="profile.jpg" alt="Admin Profile Picture">
-    <p>Today is <span id="date"></span>.</p>
     <section id="posts">
         <ul>
             <li><a href="users.php">View Users</a></li>
